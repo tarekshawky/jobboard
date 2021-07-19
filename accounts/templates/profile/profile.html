@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}
+   Profile
+{% endblock title %}
+{% block content %}
+
+ <!-- bradcam_area  -->
+ <div class="bradcam_area bradcam_bg_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text">
+                    <h3>Profile</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+<h2>{{profile.user}}</h2>
+
+<h4>{{profile.user.email}}</h4>
+
+
+<h5>{{profile.phone_number}}</h5>
+{% endblock %}

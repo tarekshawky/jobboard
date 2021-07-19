@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}
+   Edit Profile
+{% endblock title %}
+{% block content %}
+
+ <!-- bradcam_area  -->
+ <div class="bradcam_area bradcam_bg_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text">
+                    <h3>Edite Profile</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+<form method="POST">
+   
+    {% csrf_token %}
+   
+    {% bootstrap_form userform %}
+    {% bootstrap_form profileform %}
+   
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Edit Profile</button>
+    {% endbuttons %} 
+      
+</form>
+
+{% endblock %}
